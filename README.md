@@ -17,5 +17,5 @@ This repository contains a Flask API deployed in Kubernetes using Minikube.
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/simple-k8-cluster.git
+   git clone https://github.com/ma1ha/simple-k8-cluster
    cd simple-k8-cluster
