@@ -19,6 +19,9 @@ spec:
           image: maha997/simple-api:latest
           ports:
             - containerPort: 5000
+          volumeMounts:
+            - name: storage # ✅ This must match `volumes.name`
+              mountPath: /app/data
           resources:
             limits:
               memory: "512Mi"
@@ -26,3 +29,7 @@ spec:
             requests:
               memory: "256Mi"
               cpu: "250m"
+      volumes:
+        - name: storage # ✅ This name must match `volumeMounts.name`
+          persistentVolumeClaim:
+            claimName: simple-api-pvc # ✅ This must match the PVC name
